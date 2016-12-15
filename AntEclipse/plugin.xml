@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         id="in.antany.eclipsefileutility.menufortoolbar"
+         name="menufortoolbar"
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
+         <toolbar
+               id="in.antany.eclipsefileutility.toolbarmain">
+            <command
+                  commandId="in.antany.eclipsefileutility.command.copyfullpath"
+                  icon="icons/favicon.ico"
+                  id="in.antany.eclipsefileutility.cmddummy.copyfullpath"
+                  label="Copy full physical path"
+                  style="pulldown"
+                  tooltip="Copy full physical path">
+            </command>
+         </toolbar>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="menu:in.antany.eclipsefileutility.cmddummy.copyfullpath?after=additions">
+         <command
+               commandId="in.antany.eclipsefileutility.command.copyfullpath"
+               id="test"
+               label="Copy full physical file path"
+               style="push">
+         </command>
+         <command
+               commandId="in.antany.eclipsefileutility.command.copyfoldername"
+               label="Copy full physical folder name"
+               style="push">
+         </command>
+         <command
+               commandId="in.antany.eclipsefileutility.command.copyrelativepath"
+               label="Copy relative path"
+               style="push">
+         </command>
+         <command
+               commandId="in.antany.eclipsefileutility.command.copyclassname"
+               label="Copy full class name"
+               style="push">
+         </command>
+         <command
+               commandId="in.antany.eclipsefileutility.command.filename"
+               label="Copy file name"
+               style="push">
+         </command>
+      </menuContribution>
+   </extension>
+   <extension
+         id="in.antany.eclipsefileutility.command.extn"
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="in.antany.eclipsefileutility.handler.CopyFullFilePathHandler"
+            id="in.antany.eclipsefileutility.command.copyfullpath"
+            name="Copy full file path">
+      </command>
+      <command
+            defaultHandler="in.antany.eclipsefileutility.handler.CopyFolderName"
+            id="in.antany.eclipsefileutility.command.copyfoldername"
+            name="Copy folder name">
+      </command>
+      <command
+            defaultHandler="in.antany.eclipsefileutility.handler.CopyFileRelativePath"
+            id="in.antany.eclipsefileutility.command.copyrelativepath"
+            name="Copy Relative Path">
+      </command>
+      <command
+            defaultHandler="in.antany.eclipsefileutility.handler.CopyFullClassName"
+            id="in.antany.eclipsefileutility.command.copyclassname"
+            name="Copy class name">
+      </command>
+      <command
+            defaultHandler="in.antany.eclipsefileutility.handler.CopyFileName"
+            id="in.antany.eclipsefileutility.command.filename"
+            name="Copy file name">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="in.antany.eclipsefileutility.command.copyfullpath"
+            contextId="org.eclipse.ui.textEditorScope"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="CTRL+ALT+C">
+      </key>
+   </extension>
+
+</plugin>

@@ -1,0 +1,18 @@
+INDEX VERSION 1.129+/home/antany/src/java/.metadata/.plugins/org.eclipse.jdt.core
+2903646649.index
+2792489001.index
+60857662.index
+1718913014.index
+2913788404.index
+3725271265.index
+2607339485.index
+3495654795.index
+1215584147.index
+3875407284.index
+1052781769.index
+2967246132.index
+3270945349.index
+1918164438.index
+2564120498.index
+3396963762.index
+3702789907.index

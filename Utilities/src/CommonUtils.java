@@ -15,8 +15,8 @@ import java.net.URLConnection;
 public class CommonUtils {
 
 	public static void main(String[] args) throws Exception {
-		writeContent("c:\\fcib_cif_inbound.dat_tmp",
-				readContentFromFile("c:\\fcib_cif_inbound.dat"));
+		writeContent("c:\\test",
+				readContentFromFile("c:\\test"));
 	}
 
 	public static String readContentFromFile(String fileName) throws Exception {
